@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<div class="row mt-5">
+    <div class="col-md-5">
+        <img class="rounded-circle img-fluid" src="/static/img/Professional_Picture.jpg">
+    </div>
+    <div class="col-md-7 text-center">
+        <h1>About Me</h1>
+        <p class="lead">
+            Welcome to my portfolio! I am an aspiring data scientist and software developer that recently graduated from
+            The College of New Jersey with an undergraduate degree in Computer Science.
+        </p>
+        <div class="mt-5 d-flex justify-content-center">
+            <div class="col-md-2">
+                <a href="https://github.com/ThomasMolloy" class="fa fa-github fa-5x social"></a>
+            </div>
+            <div class="col-md-2">
+                <a href="https://www.linkedin.com/in/thomas-molloy-8a0a7312b/" class="fa fa-linkedin fa-5x social"></a>
+            </div>
+            <div class="col-md-2">
+                <a href="mailto:thomasjeffersonmolloy@gmail.com" class="fa fa-envelope-square fa-5x social"></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
