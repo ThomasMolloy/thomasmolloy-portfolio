@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -138,6 +139,8 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ASGI_APPLICATION = 'personal_portfolio.routing.application'
 
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
@@ -163,3 +166,5 @@ STATICFILES_FINDERS = [
     'django_plotly_dash.finders.DashComponentFinder',
     'django_plotly_dash.finders.DashAppDirectoryFinder',
 ]
+
+django_heroku.settings(locals())

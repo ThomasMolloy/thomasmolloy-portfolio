@@ -1,7 +1,13 @@
-{% load plotly_dash %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<body>
-{% plotly_app name='dash_app_id' %}
+
+{% block content %}
+    {% load plotly_dash %}
+<body style="margin:0px">
+<div class="{% plotly_class name='dash_app_id' %} card" style="height:100%; width:100%">
+    {% plotly_app name='dash_app_id' ratio=1.0 %}
+</div>
 </body>
 </html>
+{% endblock%}

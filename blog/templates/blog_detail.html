@@ -11,6 +11,8 @@
         </a>&nbsp;
         {% endfor %}
     </small>
+    <br>
+    <a href="{{ post.link }}"> View Article Here</a>
     <p>{{ post.body | linebreaks }}</p>
     <h3>Leave a comment:</h3>
     <form action="/blog/{{ post.pk }}/" method="post">
